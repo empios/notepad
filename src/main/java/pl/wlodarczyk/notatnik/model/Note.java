@@ -20,9 +20,9 @@ public class Note {
 
     }
 
-    public Note(String tytul, String tekst) {
-        this.title = tytul;
-        this.text = tekst;
+    public Note(String title, String text) {
+        this.title = title;
+        this.text = text;
     }
 
     public Long getId() {
