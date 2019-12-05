@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:HH="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Show All Notes</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tytuł</th>
+        <th>Wpis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="w: ${note}">
+        <td><span th:text="${w.getId()}"></span></td>
+        <td><span th:text="${w.getTitle()}"></span></td>
+        <td><span th:text="${w.getText()}"></span></td>
+        <td><a th:href="@{/edit/{id}(id=${w.getId()})}">Edycja</a></td>
+        <td><a th:href="@{/delete/{id}(id=${w.getId()})}">Usuń</a></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<p><a href="/add">Dodaj nową notatkę</a></p>
+</div>
+
+</body>
+</html>

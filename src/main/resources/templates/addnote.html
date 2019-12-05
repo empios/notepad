@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Add Notes</title>
+</head>
+<body>
+<form action="#" th:action="@{/addnote}" th:object="${note}" method="post">
+
+    <label for="title">Tytuł</label>
+    <input type="text" th:field="*{title}" id="title" placeholder="title">
+    <br>
+    <label for="text">Tekst</label>
+    <br>
+    <input type="text" th:field="*{text}" id="text" placeholder="text">
+    <br>
+    <input type="submit" value="Dodaj Notatkę">
+</form>
+</body>
+</html>
